@@ -43,6 +43,7 @@ img {
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .visually-hidden {
@@ -218,7 +219,7 @@ img {
   color: var(--btn-text-color);
   font-weight: bold;
   letter-spacing: 0.06em;
-  background: #2196f3;
+  background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
@@ -293,15 +294,14 @@ img {
 
   cursor: pointer;
   background-color: transparent;
+  color: var(--btn-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close:hover,
 .modal-btn-close:focus {
-  background-color: var(--nav-text-color);
-  color: #ffffff;
+  fill: var(--nav-text-color);
 }
 
 .modal-title {
@@ -463,9 +463,11 @@ img {
   color: var(--btn-text-color);
   font-weight: bold;
   letter-spacing: 0.06em;
-  background: #188ce8;
+  background: var(--nav-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  width: 200px;
+  height: 50px;
   border: none;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -661,8 +663,7 @@ img {
 .clients {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  margin-top: 0;
   color: #afb1b8;
 }
 
@@ -678,9 +679,10 @@ img {
 .client {
   display: flex;
   fill: #afb1b8;
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-basis: calc(100% / 6 - 30px);
+}
+
+.client:not(:last-child) {
+  margin-right: 30px;
 }
 
 .client-link {
@@ -936,7 +938,7 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
-  margin-right: 93px;
+  margin-right: 98px;
 }
 
 .footer-social-name {
@@ -992,7 +994,7 @@ img {
   display: inline-flex;
   align-items: center;
 
-  padding-left: 29px;
+  padding: 10px 28px 10px 29px;
   width: 200px;
   height: 50px;
 
@@ -1028,8 +1030,7 @@ img {
 
   box-sizing: border-box;
   text-align: left;
-  padding-left: 16px;
-  padding: 15 0;
+  padding: 15px 16px;
   margin-right: 12px;
   width: 358px;
   height: 50px;
@@ -1046,3 +1047,4 @@ img {
   border-color: var(--nav-text-color);
   outline: none;
 }
+
